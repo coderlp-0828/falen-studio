@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Falen Estudio — Arte Independiente</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo-area">
+        <img src="assets/img/FALEN-sin-fondo.png" alt="Logo Falen Estudio" class="logo-img" />
+        <h1 class="logo-text">FALEN <span>Estudio</span></h1>
+      </div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#about">Nosotros</a>
+        <a href="#artists">Artistas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Donde el arte independiente encuentra su voz.</h2>
+          <p>Falen Estudio impulsa artistas de distintas disciplinas. Creamos un espacio digital donde la autenticidad es nuestra bandera.</p>
+          <div class="cta">
+            <a href="#artists" class="btn">Explora artistas</a>
+            <a href="#contacto" class="btn btn-outline">Colabora</a>
+          </div>
+        </div>
+        <div class="hero-bg"></div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>Quiénes somos</h3>
+      <p>Somos un estudio digital que promueve arte independiente: música, danza, pintura y experimentación sonora. Creemos en la autogestión y la colaboración creativa.</p>
+    </section>
+
+    <section id="artists" class="container artists">
+      <h3>Artistas Destacados</h3>
+      <div class="grid">
+        <!-- Víctor -->
+        <article class="card">
+          <div class="card-media" style="background-image:url('./assets/img/flores-editado-500px.jpg')"></div>
+          <div class="card-body">
+            <h4>Víctor Fernando García Sánchez</h4>
+            <p class="role">Pintura — Acuarela</p>
+            <p>Explora emociones humanas con técnicas de acuarela y grafito. Su obra fusiona tradición y modernidad.</p>
+          </div>
+        </article>
+
+        <!-- Erika -->
+        <article class="card">
+            <div class="card-media" style="background-image:url('./assets/img/danza-editado-500px.jpg')"></div>
+            <div class="card-body">
+                <h4>Erika Jasive Torres Ramírez</h4>
+                <p class="role">Danza Folklórica</p>
+                <p>Bailarina y docente que mantiene viva la identidad mexicana a través del movimiento y el color.</p>
+            </div>
+        </article>
+
+        <!-- Freizedo -->
+        <article class="card">
+            <a href="./freizedo.html" style="text-decoration: none; color: aliceblue;">
+                <div class="card-media" style="background-image:url('./assets/img/dj-editado-500px.jpg')"></div>
+                <div class="card-body">
+                    <h4>Roberto “Freizedo” Alvarado</h4>
+                    <p class="role">DJ y Productor</p>
+                    <p>Fusiona techno y arte sonoro en una propuesta independiente que conecta con públicos locales e internacionales.</p>
+                </div>
+            </a>
+        </article>
+
+        <!-- Marco -->
+        <article class="card">
+          <div class="card-media" style="background-image:url('./assets/img/chelo-editado-500px.jpg')"></div>
+          <div class="card-body">
+            <h4>Marco Antonio Chávez</h4>
+            <p class="role">Músico — Bolero</p>
+            <p>Cantante y guitarrista con una trayectoria de serenatas, tríos y bolero tradicional. Voz cálida, raíz mexicana.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="container contacto">
+      <h3>Contacto / Colabora</h3>
+      <form id="contactForm">
+        <label>Nombre
+          <input type="text" name="name" required />
+        </label>
+        <label>Correo electrónico
+          <input type="email" name="email" required />
+        </label>
+        <label>Mensaje
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Falen Estudio S. de R.L. — Creado por artistas para artistas.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector("#contactForm").addEventListener("submit", e=>{
+      e.preventDefault();
+      alert("¡Gracias por tu mensaje! Nos pondremos en contacto pronto.");
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
