@@ -11,27 +11,28 @@
     <div class="container">
       <div class="logo-area">
         <img src="assets/img/FALEN-sin-fondo.png" alt="Logo Falen Estudio" class="logo-img" />
-        <h1 class="logo-text">FALEN <span>Estudio</span></h1>
+        <!-- <h1 class="logo-text">FALEN <span>Estudio</span></h1> -->
       </div>
-      <nav>
+    </div>
+  </header>
+  <nav>
         <a href="#inicio">Inicio</a>
         <a href="#about">Nosotros</a>
         <a href="#artists">Artistas</a>
+        <a href="#blogs">Articulos</a>
         <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
+  </nav>
 
   <main>
     <section id="inicio" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h2>Donde el arte independiente encuentra su voz.</h2>
+          <h2>"Donde el arte independiente encuentra su voz."</h2>
           <p>Falen Estudio impulsa artistas de distintas disciplinas. Creamos un espacio digital donde la autenticidad es nuestra bandera.</p>
-          <div class="cta">
+          <!-- <div class="cta">
             <a href="#artists" class="btn">Explora artistas</a>
             <a href="#contacto" class="btn btn-outline">Colabora</a>
-          </div>
+          </div> -->
         </div>
         <div class="hero-bg"></div>
       </div>
@@ -89,18 +90,39 @@
       </div>
     </section>
 
+    <section id="blogs" class="container blogs">
+      <h3>Articulos</h3>
+      <div class="grid-article">
+        <article class="card">
+            <div class="card-media" style="background-image:url('./assets/img/notes-1734490_1920.jpg')"></div>
+            <div class="card-body">
+                <h4>Articulo 1 </h4>
+                <p class="role">Lorem ipsum dolor sit amet </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsa officia incidunt laborum error repellat alias eos? Tempora fugit cupiditate similique possimus ipsam, hic accusamus sint magnam ullam iure aspernatur.</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-media" style="background-image:url('./assets/img/man-2179313_1920.jpg')"></div>
+            <div class="card-body">
+                <h4>La Voz Auténtica</h4>
+                <p class="role">La Doble Vida del Artista Independiente</p>
+                <p>Un artista es clasificado como "independiente" porque opera fuera de las estructuras y el apoyo económico de las grandes industrias (sellos, galerías o estudios).</p>
+            </div>
+        </article>
+      </div>
+      
+    </section>
+
     <section id="contacto" class="container contacto">
       <h3>Contacto / Colabora</h3>
       <form id="contactForm">
-        <label>Nombre
-          <input type="text" name="name" required />
-        </label>
-        <label>Correo electrónico
-          <input type="email" name="email" required />
-        </label>
-        <label>Mensaje
-          <textarea name="message" rows="4" required></textarea>
-        </label>
+        <label>Nombre</label>
+        <input type="text" name="name" required />
+        <label>Correo electrónico</label>
+        <input type="email" name="email" required />
+        <label>Mensaje</label>
+        <textarea name="message" rows="4" required></textarea>
         <button class="btn" type="submit">Enviar</button>
       </form>
     </section>
