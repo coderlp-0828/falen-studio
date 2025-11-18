@@ -16,13 +16,13 @@
         <a href="index.html"><img src="./assets/img/FALEN-sin-fondo.png" alt="Falen Estudio" class="logo-img" /></a>
         <!-- <h1 class="logo-text">FALEN <span>Estudio</span></h1> -->
       </div>
-      <nav>
-        <a href="index.html#inicio">Inicio</a>
-        <a href="index.html#artists">Artistas</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
     </div>
   </header>
+  <nav>
+    <a href="index.html#inicio">Inicio</a>
+    <a href="index.html#artists">Artistas</a>
+    <a href="index.html#contacto">Contacto</a>
+  </nav>
 
   <!-- PERFIL DEL ARTISTA -->
   <main>
@@ -37,7 +37,7 @@
     <section class="container artist-content">
       <div class="artist-grid">
         <div class="artist-photo">
-          <img src="assets/freizedo.jpg" alt="Retrato de Freizedo" />
+          <img src="./assets/img/avatar.png" alt="Retrato de Freizedo" />
         </div>
         <div class="artist-bio">
           <h3>Sobre el artista</h3>
@@ -49,22 +49,39 @@
         </div>
       </div>
     </section>
+    
+    <section class="container video">
+      
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6ah99MjrX-I?si=yrya8KQF1AZjdXh5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="box1">box 1</div>
+    </section>
 
     <section class="container gallery">
       <h3>Galería y proyectos</h3>
-      <div class="gallery-grid">
-        <img src="assets/freizedo1.jpg" alt="Presentación en vivo de Freizedo" />
-        <img src="assets/freizedo2.jpg" alt="Equipo de producción" />
-        <img src="assets/freizedo3.jpg" alt="Evento de arte sonoro" />
-      </div>
+
+      <div class="carrusel-container">
+        <div class="carrusel-slide">
+            <img src="./assets/img/dj-133.jpg" alt="Imagen 1">
+            <img src="./assets/img/dj-716.jpg" alt="Imagen 2">
+            <img src="./assets/img/headphones-dj.jpg" alt="Imagen 3">
+        </div>
+
+        <button class="prev" onclick="moverSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moverSlide(1)">&#10095;</button>
+    </div>
+      <!-- <div class="gallery-grid">
+        <img src="./assets/img/dj-133.jpg" alt="Presentación en vivo de Freizedo" />
+        <img src="./assets/img/headphones-dj.jpg" alt="Equipo de producción" />
+        <img src="./assets/img/dj-716.jpg" alt="Evento de arte sonoro" />
+      </div> -->
     </section>
 
     <section class="container artist-links">
       <h3>Redes y contacto</h3>
       <div class="links">
-        <a href="https://soundcloud.com/freizedo" target="_blank">SoundCloud</a>
-        <a href="https://www.instagram.com/josh_freizedo?igsh=NnVyOWk1dWV4bXM=" target="_blank"><i class="fa-brands fa-square-instagram"></i>Instagram</a>
-        <a href="https://www.facebook.com/share/v/1BtYu3tMjy/" target="_blank"><i class="fa-brands fa-square-facebook"></i>facebook</a>
+        <a href="https://soundcloud.com/freizedo" target="_blank"><i class="fa-brands fa-soundcloud"></i></a>
+        <a href="https://www.instagram.com/josh_freizedo?igsh=NnVyOWk1dWV4bXM=" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.facebook.com/share/v/1BtYu3tMjy/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
       </div>
     </section>
   </main>
@@ -74,5 +91,6 @@
       <p>© 2025 Falen Estudio S. de R.L. — Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script src="./main.js"></script>
 </body>
 </html>
