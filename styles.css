@@ -350,12 +350,13 @@ button {
 
 .gallery {
   padding: 60px 0;
-  text-align: center;
+  
 }
 
 .gallery h3 {
   color: var(--pink);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 
