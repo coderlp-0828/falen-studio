@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 :root {
   --bg: #0c0c0d;
   --card: #18181a;
@@ -6,14 +10,29 @@
   --pink: #f17fa3;
   --pink-glow: #ff9bbf;
   --border: rgba(255,255,255,0.06);
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  /* font-family: 'Poppins', 'Segoe UI', sans-serif; */
+   /* font-family: "Agbalumo", system-ui;
+  font-weight: 400;
+  font-style: normal; */
 }
+
+
 
 body {
   background: var(--bg);
   color: var(--text);
   margin: 0;
   line-height: 1.6;
+}
+
+h1,h2,h3,h4{
+  font-family: "Agbalumo", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* HEADER */
@@ -192,7 +211,7 @@ nav a:hover {
 }
 
 .card-media {
-  height: 180px;
+  height: 220px;
   background-size: cover;
   background-position: center;
 }
@@ -232,7 +251,39 @@ nav a:hover {
 .contacto h3 {
   color: var(--pink);
   text-align: center;
+  font-size: 1.6rem;
+
 }
+
+.redes{
+  text-align: center;
+  padding: 40px 0 80px;
+}
+.redes h3{
+  color: var(--pink-glow);
+  font-size: 1.6rem;
+  
+}
+
+.redes .links a {
+  color: var(--text);
+  margin: 0 10px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.redes .links a i{
+  font-size: 32px;
+  transition:  all .5s;
+}
+
+.redes .links a i:hover {
+  transform: scale(1.5);
+  /* border-bottom: 1px solid var(--pink); */
+  /* box-shadow: 0 0 25px rgba(241,127,163,0.2); */
+}
+
+
 
 form {
   max-width: 500px;
@@ -269,7 +320,7 @@ button {
 
 
 
-/*----------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ARTIST PAGE */
 
@@ -286,7 +337,7 @@ button {
 }
 
 .artist-hero .overlay {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('./assets/img/concert-1854113_1920.jpg');
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('./assets/img/concert-1854113_1920.jpg'); */
   background-size: cover;
   background-position: bottom;
   position: absolute;
@@ -326,7 +377,7 @@ button {
 
 .artist-photo img {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 0 25px rgba(241,127,163,0.2);
 }
@@ -363,8 +414,9 @@ button {
 /* CARRUSEL */
 
 .carrusel-container {
-            max-width: 800px; /* Ancho máximo para monitores/laptops */
-            width: 90%; /* Responsividad: ocupa el 90% del ancho disponible */
+            max-width: 750px; 
+            /* Ancho máximo para monitores/laptops */
+            width: 100%; /* Responsividad: ocupa el 90% del ancho disponible */
             margin: auto;
             position: relative;
             overflow: hidden; /* Oculta las imágenes que están fuera del contenedor */
@@ -381,8 +433,10 @@ button {
 
         .carrusel-slide img {
             width: 100%; /* Cada imagen ocupa el 100% del ancho del carrusel-container */
+            height:100%;
             flex-shrink: 0; /* Asegura que la imagen no se encoja */
-            height: auto;
+            object-fit:contain;
+            height: auto ;
             display: block;
         }
 
@@ -455,7 +509,6 @@ button {
   margin: 0 10px;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  
 }
 
 .artist-links .links a i{
@@ -467,4 +520,284 @@ button {
   transform: scale(1.5);
   /* border-bottom: 1px solid var(--pink); */
   /* box-shadow: 0 0 25px rgba(241,127,163,0.2); */
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+/* PORTADA DEL ARTÍCULO */
+.article-hero {
+  position: relative;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 60px;
+}
+
+.article-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.article-hero .hero-text {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.article-hero h1 {
+  font-size: 3rem;
+  color: var(--pink-glow);
+  text-shadow: 0 0 15px rgba(255, 150, 180, 0.4);
+}
+
+.article-hero .sub {
+  color: var(--muted);
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* INTRO */
+.magazine-intro {
+  margin: 60px auto;
+  max-width: 800px;
+}
+
+.magazine-intro .dropcap:first-letter {
+  float: left;
+  font-size: 4rem;
+  color: var(--pink);
+  margin-right: 10px;
+  line-height: 0.8;
+}
+
+/* COLUMNAS TIPO REVISTA */
+.magazine-columns {
+  column-count: 2;
+  column-gap: 40px;
+  margin-bottom: 60px;
+  text-align: justify;
+}
+
+.magazine-columns p {
+  margin-bottom: 18px;
+}
+
+.magazine-columns .quote {
+  font-size: 1.6rem;
+  color: var(--pink);
+  font-style: italic;
+  column-span: all;
+  text-align: center;
+  margin: 35px 0;
+}
+
+/* GALERÍA EDITORIAL */
+.editorial-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 60px 0;
+}
+
+.editorial-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(241, 127, 163, 0.15);
+  transition: transform .3s;
+}
+
+.editorial-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* SECCIÓN FINAL */
+.final-section {
+  margin: 70px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.final-section h2 {
+  color: var(--pink-glow);
+  font-size: 2.2rem;
+}
+
+.final-section p {
+  color: var(--muted);
+}
+
+/* AUTOR */
+.author-box {
+  display: flex;
+  gap: 20px;
+  margin: 60px auto;
+  max-width: 650px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 150, 180, 0.2);
+}
+
+.author-box img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.author-box h4 {
+  color: var(--pink);
+}
+
+.author-box p {
+  color: var(--muted);
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* PORTADA VISIÓN & MISIÓN */
+.vision-hero {
+  position: relative;
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 60px;
+}
+
+.vision-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.vision-hero .hero-text {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.vision-hero h1 {
+  font-size: 3rem;
+  color: var(--pink-glow);
+  text-shadow: 0 0 25px rgba(255,100,150,0.4);
+}
+
+.vision-hero .sub {
+  color: var(--muted);
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+
+/* CONTENIDO PRINCIPAL */
+.vision-page {
+  padding: 60px 0;
+}
+
+
+/* BLOQUES VISIÓN Y MISIÓN */
+.vision-block,
+.mission-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.vision-text, .mission-text {
+  flex: 1 1 400px;
+}
+
+.vision-text h2,
+.mission-text h2, h2 {
+  color: var(--pink);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+h2{
+  text-align: center;
+}
+
+.vision-text p,
+.mission-text p {
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.vision-img{
+  width: 300px;
+}
+
+.vision-img img,
+.mission-img img {
+  width: 100px;
+  /* border-radius: 10px; */
+  /* box-shadow: 0 0 25px rgba(241,127,163,0.3); */
+  flex: 1 1 400px;
+}
+
+
+/* FRASE DESTACADA */
+.quote-section {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.quote-section p {
+  color: var(--pink-glow);
+  font-size: 1.8rem;
+  font-style: italic;
+  text-shadow: 0 0 10px rgba(241,127,163,0.4);
+}
+
+
+/* VALORES */
+.values-section {
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.values-section h3 {
+  color: var(--pink-glow);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.value-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(241,127,163,0.15);
+  text-align: center;
+  transition: transform .3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(241,127,163,0.4);
+}
+
+.value-card h4 {
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: var(--muted);
+  line-height: 1.5;
 }
